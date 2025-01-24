@@ -49,7 +49,7 @@ Dataset yang mentah tersebut memiliki data yang berjumlah 2200 dan terdiri dari 
 Untuk memahami atribut-atribut yang ada di dalam dataset tersebut dilakukan beberapa langkah untuk memahami isi dan tipe atribut tersebut. Pertama, dengan menggunakan fungsi bawaan dari python yaitu .info() penulis bisa mendapatkan bahwa dalam dataset tersebut tidak terdapat data yang kosong dan bisa mengetahui tipe data dari masing-masing atribut yang ada pada dataset.
 
 Tabel 1. keluaran dari built-in function bahasa pemrograman Python pada dataset land_df
-**_(letak gambar tabel 1)_**
+![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/1.png?raw=true)
 Kedua, dengan menggunakan .describe() penulis dapat mengetahui statistik dasar dari data seperti percentile, mean, standar deviasi, jumlah data, min, dan max. Hasil fungsi ini ditampilkan pada tabel 2 seperti berikut.
 
 Tabel 2. statistik dataset land_df hasil dari fungsi .describe()
