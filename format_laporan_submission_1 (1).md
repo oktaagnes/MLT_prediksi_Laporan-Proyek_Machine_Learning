@@ -117,11 +117,11 @@ Evaluasi menggunakan Accuracy, Precision, dan Recall bertujuan untuk memberikan 
 - Accuracy memberikan gambaran umum performa model.<br>
 ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/formula%20accuracy.png?raw=true)<br>
 gambar 12. formula accuracy <br>
- 
 - Precision adalah metrik evaluasi yang mengukur seberapa tepat model Anda dalam membuat prediksi positif. Artinya, dari semua prediksi positif yang dibuat oleh model, berapa banyak yang benar-benar positif.<br>
-gambar 13. formula precision <br>
-- Recall, yang merupakan harmoni antara precision dan recall, dapat digunakan jika Anda ingin menggabungkan keduanya menjadi satu metrik untuk evaluasi yang lebih menyeluruh.
 ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/formula%20precision.png?raw=true)
+gambar 13. formula precision <br>
+- Recall, yang merupakan harmoni antara precision dan recall, dapat digunakan jika Anda ingin menggabungkan keduanya menjadi satu metrik untuk evaluasi yang lebih menyeluruh.<br>
+![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/formula%20recall.png?raw=true)<br>
 gambar 114. formula Recall<br>
 
 ## Referensi
