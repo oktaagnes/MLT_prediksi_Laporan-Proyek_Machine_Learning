@@ -46,14 +46,15 @@ Land Dataset: (https://www.kaggle.com/datasets/siddharthss/crop-recommendation-d
 
 Dataset yang mentah tersebut memiliki data yang berjumlah 2200 dan terdiri dari 8 atribut, yaitu N, P, K, temperature, humidity pH, rainfall dan label. Hal tersebut membuat apabila data-data tersebut disusun dalam format tabel baris dan kolom akan membentuk tabel yang berisi oleh 29580 baris dan 5 kolom.
 
-Untuk memahami atribut-atribut yang ada di dalam dataset tersebut dilakukan beberapa langkah untuk memahami isi dan tipe atribut tersebut. Pertama, dengan menggunakan fungsi bawaan dari python yaitu .info() penulis bisa mendapatkan bahwa dalam dataset tersebut tidak terdapat data yang kosong dan bisa mengetahui tipe data dari masing-masing atribut yang ada pada dataset.
+Untuk memahami atribut-atribut yang ada di dalam dataset tersebut dilakukan beberapa langkah untuk memahami isi dan tipe atribut tersebut. Pertama, dengan menggunakan fungsi bawaan dari python yaitu .info() penulis bisa mendapatkan bahwa dalam dataset tersebut tidak terdapat data yang kosong dan bisa mengetahui tipe data dari masing-masing atribut yang ada pada dataset.<br>
 
-Tabel 1. keluaran dari built-in function bahasa pemrograman Python pada dataset land_df
-![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/1.png?raw=true)
+Tabel 1. keluaran dari built-in function bahasa pemrograman Python pada dataset land_df<br>
+![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/1.png?raw=true)<br>
+
 Kedua, dengan menggunakan .describe() penulis dapat mengetahui statistik dasar dari data seperti percentile, mean, standar deviasi, jumlah data, min, dan max. Hasil fungsi ini ditampilkan pada tabel 2 seperti berikut.
+Tabel 2. statistik dataset land_df hasil dari fungsi .describe()<br>
+![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/1.png?raw=true)<br>
 
-Tabel 2. statistik dataset land_df hasil dari fungsi .describe()
-**_(letak gambar tabel 2)_**
 Pada notebooks dilakukan visualisasi untuk membandingkan rerata data keseluruhan yang bertipe house dan yang bertipe unit. Didapatkan bahwa rerata harga rumah yang bertipe house lebih tinggi daripada rerata harga rumah yang bertipe unit.
 
 Pada atribut fitur price dilakukan visualisasi data seperti tampak di gambar 3, visualisasi harga yang dilakukan adalah dengan memanfaatkan histogram untuk mengetahui jumlah data pada masing-masing rentang harga rumah yang ada didataset.
