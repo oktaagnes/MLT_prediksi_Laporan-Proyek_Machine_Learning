@@ -1,4 +1,4 @@
-# Laporan Proyek Machine Learning - Okta Agnes Ladyagatha Manik
+![image](https://github.com/user-attachments/assets/52db7582-c52c-4cd6-9546-904db6ef1984)# Laporan Proyek Machine Learning - Okta Agnes Ladyagatha Manik
 
 ## Domain Proyek
 
@@ -47,35 +47,42 @@ Land Dataset: (https://www.kaggle.com/datasets/siddharthss/crop-recommendation-d
 Dataset yang mentah tersebut memiliki data yang berjumlah 2200 dan terdiri dari 8 atribut, yaitu N, P, K, temperature, humidity pH, rainfall dan label. Hal tersebut membuat apabila data-data tersebut disusun dalam format tabel baris dan kolom akan membentuk tabel yang berisi oleh 29580 baris dan 5 kolom.
 
 Untuk memahami atribut-atribut yang ada di dalam dataset tersebut dilakukan beberapa langkah untuk memahami isi dan tipe atribut tersebut. Pertama, dengan menggunakan fungsi bawaan dari python yaitu .info() penulis bisa mendapatkan bahwa dalam dataset tersebut tidak terdapat data yang kosong dan bisa mengetahui tipe data dari masing-masing atribut yang ada pada dataset.<br>
-
-Tabel 1. keluaran dari built-in function bahasa pemrograman Python pada dataset land_df<br>
 ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/1.png?raw=true)<br>
+gambar 1. keluaran dari built-in function bahasa pemrograman Python pada dataset land_df<br>
 
 Kedua, dengan menggunakan .describe() penulis dapat mengetahui statistik dasar dari data seperti percentile, mean, standar deviasi, jumlah data, min, dan max. Hasil fungsi ini ditampilkan pada tabel 2 seperti berikut.
-Tabel 2. statistik dataset land_df hasil dari fungsi .describe()<br>
-![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/1.png?raw=true)<br>
+![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/2.png?raw=true)<br>
+gambar 2. statistik dataset land_df hasil dari fungsi .describe()<br>
 
 Pada notebooks dilakukan visualisasi untuk membandingkan rerata data keseluruhan yang bertipe house dan yang bertipe unit. Didapatkan bahwa rerata harga rumah yang bertipe house lebih tinggi daripada rerata harga rumah yang bertipe unit.
 
-Pada atribut fitur price dilakukan visualisasi data seperti tampak di gambar 3, visualisasi harga yang dilakukan adalah dengan memanfaatkan histogram untuk mengetahui jumlah data pada masing-masing rentang harga rumah yang ada didataset.
-**_(Gambar 3. sebaran numerikal )_**
-Pada atribut fitur price dilakukan visualisasi data seperti tampak di gambar 3, visualisasi harga yang dilakukan adalah dengan memanfaatkan histogram untuk mengetahui jumlah data pada masing-masing rentang harga rumah yang ada didataset.
-**_(Gambar 4. sebaran kategorial)_**
+Pada atribut fitur price dilakukan visualisasi data seperti tampak di gambar 3, visualisasi harga yang dilakukan adalah dengan memanfaatkan histogram untuk mengetahui jumlah data pada masing-masing rentang harga rumah yang ada didataset.<br>
+![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/sebaranpng.png?raw=true)<br>
+gambar 3. sebaran data numerikal <br>
 
-Selanjutnya untuk mengetahui hubungan masing-masing fitur terhadap satu sama lain dihitung korelasinya. Menghasilkan bahwa fitur price memiliki korelasi positif terhadap fitur jumlah bedrooms. Karena terdapat sejumlah data yang tidak konsisten, dalam arti ada data yang jumlah bedrooms yang tinggi tetapi memiliki price yang tinggi dan ada juga rendah. Dengan begitu nilai korelasi tidak mendekati positif satu, hanya bernilai 0.48
-**_(Gambar 4. Visualisasi histogram matrix)_**
+Pada atribut fitur price dilakukan visualisasi data seperti tampak di gambar 3, visualisasi harga yang dilakukan adalah dengan memanfaatkan histogram untuk mengetahui jumlah data pada masing-masing rentang harga rumah yang ada didataset.<br>
+![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/sebaran%20label.png?raw=true)<br>
+gambar 4. sebaran data katrgorikal <br>
+
+Selanjutnya untuk mengetahui hubungan masing-masing fitur terhadap satu sama lain dihitung korelasinya. Menghasilkan bahwa fitur price memiliki korelasi positif terhadap fitur jumlah bedrooms. Karena terdapat sejumlah data yang tidak konsisten, dalam arti ada data yang jumlah bedrooms yang tinggi tetapi memiliki price yang tinggi dan ada juga rendah. Dengan begitu nilai korelasi tidak mendekati positif satu, hanya bernilai 0.48.<br>
+![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/matrix.png?raw=true) <br>
+gambar 5. matriks <br>
 
 ## Data Preparation
 
-Penulis melakukan reduksi dimensi menggunakan Principal Component Analysis (PCA), sebuah teknik yang digunakan untuk mengubah data dengan banyak variabel (fitur) menjadi representasi yang lebih sederhana, sambil tetap mempertahankan sebagian besar informasi yang terkandung dalam data asli. PCA digunakan untuk mengurangi kompleksitas data, menghilangkan korelasi antar variabel, serta meningkatkan interpretabilitas tanpa mengorbankan informasi penting dalam data.
+Penulis melakukan reduksi dimensi menggunakan Principal Component Analysis (PCA), sebuah teknik yang digunakan untuk mengubah data dengan banyak variabel (fitur) menjadi representasi yang lebih sederhana, sambil tetap mempertahankan sebagian besar informasi yang terkandung dalam data asli. PCA digunakan untuk mengurangi kompleksitas data, menghilangkan korelasi antar variabel, serta meningkatkan interpretabilitas tanpa mengorbankan informasi penting dalam data.<br>
 
-Sebelum melanjutkan ke tahap pembagian dataset, penulis memisahkan variabel independen (N, P, K, suhu, kelembaban, pH, curah hujan) sebagai data
-𝑋
-X, dan variabel dependen (label) sebagai data
-𝑦
-y. Mengingat bahwa fitur label dalam dataset bersifat non-numerik (kategorikal), teknik label encoding diterapkan untuk mengonversi data tersebut menjadi representasi numerik yang kompatibel dengan model.
+Sebelum melanjutkan ke tahap pembagian dataset, penulis memisahkan variabel independen (N, P, K, suhu, kelembaban, pH, curah hujan) sebagai data.<br>
+𝑋 .<br>
+X, dan variabel dependen (label) sebagai data.<br>
+𝑦.<br>
+y. Mengingat bahwa fitur label dalam dataset bersifat non-numerik (kategorikal), teknik label encoding diterapkan untuk mengonversi data tersebut menjadi representasi numerik yang kompatibel dengan model..<br>
+![alt text](![image](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/encoding.png?raw=true) <br>
+gambar 6. label encoding<br>
 
-Selanjutnya, penulis membagi dataset menjadi dua bagian, yaitu training set dan test set. Pembagian ini penting untuk menghindari risiko overfitting, yang terjadi ketika model "menghafal" data latih dan tidak dapat generalisasi dengan baik pada data yang belum pernah dilihat sebelumnya. Dengan membagi dataset, model dapat diuji untuk memastikan kemampuannya dalam memprediksi data yang baru dan tidak terduga.
+Selanjutnya, penulis membagi dataset menjadi dua bagian, yaitu training set dan test set. Pembagian ini penting untuk menghindari risiko overfitting, yang terjadi ketika model "menghafal" data latih dan tidak dapat generalisasi dengan baik pada data yang belum pernah dilihat sebelumnya. Dengan membagi dataset, model dapat diuji untuk memastikan kemampuannya dalam memprediksi data yang baru dan tidak terduga.<br>
+![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/pembagian%20dataset.png?raw=true) <br>
+gambar 7. training set dan test set<br>
 
 Untuk memastikan kualitas dataset yang digunakan, penulis juga menerapkan metode berbasis density untuk mendeteksi outlier dalam dataset. Selain itu, proses standarisasi data dilakukan untuk memastikan bahwa seluruh nilai dari fitur numerik, baik pada data latih maupun data uji, berada dalam skala yang seragam, sehingga model dapat memproses data dengan lebih baik dan menghasilkan prediksi yang akurat.
 
@@ -85,30 +92,37 @@ Metode yang penulis pilih untuk memprediksi jenis tanaman yang paling sesuai den
 
 - 1. K-Nearest Neighbor (KNN): KNN adalah algoritma berbasis instance yang digunakan untuk menemukan kecocokan antara kondisi lahan dan tanaman yang ada dalam dataset. Pada KNN, setiap titik data (dalam hal ini, kondisi lahan) dibandingkan dengan titik data lainnya, dan tanaman yang paling sering muncul di antara titik data terdekat akan dipilih sebagai rekomendasi. Kelebihan KNN adalah kesederhanaannya dan kemampuannya untuk memberikan prediksi berdasarkan data yang ada tanpa perlu melatih model secara intensif. KNN sangat efektif dalam menangani data dengan hubungan yang tidak linier dan memerlukan sedikit asumsi tentang distribusi data.
      Penulis pertama melakukan proses tuning atau optimasi parameter pada algoritma K-Nearest Neighbors Regressor (KNN Regressor) menggunakan bahasa pemrograman Python dan library Scikit-learn. Secara spesifik, proses yang dilakukan adalah mencari nilai k (jumlah tetangga terdekat) yang optimal untuk model KNN Regressor. gambar di bawah menunjukan nilai K yang optimal yaitu 7.
+![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/tuning%20.png?raw=true) <br>
+gambar 8. tuning dari algoritma KNN <br>
 
-**_(gambar tunning)_**
-Selanjutnya, Klasifikasi KNN (KNN Classifier): Digunakan untuk mengklasifikasikan data ke dalam kategori.
-**(gambar CNN)\***
+Selanjutnya, Klasifikasi KNN (KNN Classifier): Digunakan untuk mengklasifikasikan data ke dalam kategori.<br>
+![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/cnn.png?raw=true)<br>
+gambar 9. algoritma K-Nearest Neighbor (KNN) <br>
 
 - 2. Random Forest: Random Forest adalah algoritma ensemble yang terdiri dari banyak pohon keputusan (decision trees) yang bekerja bersama-sama untuk meningkatkan akurasi prediksi. Setiap pohon keputusan dilatih menggunakan subset acak dari data, dan hasil akhir dihitung berdasarkan prediksi mayoritas dari seluruh pohon. Dalam konteks prediksi tanaman, Random Forest dapat menangani berbagai faktor tanah dan iklim dengan cara yang lebih fleksibel dan mengurangi risiko overfitting. Algoritma ini sangat kuat dalam menangani variabel yang memiliki interaksi kompleks, seperti suhu, kelembapan, pH, dan unsur hara tanah (N, P, K).
      Penulis melakukan proses Klasifikasi (RandomForestClassifier) yang mana Digunakan untuk memprediksi label kelas (kategori). Outputnya berupa kelas atau probabilitas keanggotaan kelas. Evaluasinya menggunakan metrik seperti akurasi, precision, recall, dan f1-score. Selanjutnya, Regresi (RandomForestRegressor): Digunakan untuk memprediksi nilai numerik kontinu. Outputnya berupa nilai numerik. Evaluasinya menggunakan metrik seperti MSE, RMSE (Root Mean Squared Error), dan MAE (Mean Absolute Error).
-     **_(gambar Rf)_**
+![alt text]()
+gambar 10. algoritma Random Forest (rf) <br>
 
-- 3. XGBoost: XGBoost (Extreme Gradient Boosting) adalah algoritma yang berbasis pada teknik gradient boosting dan sangat populer karena kemampuannya untuk memberikan akurasi tinggi dengan waktu komputasi yang efisien. XGBoost membangun model secara bertahap, dengan setiap model baru memperbaiki kesalahan model sebelumnya. Dalam prediksi pemilihan tanaman, XGBoost sangat baik untuk menangani data dengan banyak fitur dan menghasilkan rekomendasi yang lebih tepat dengan menggunakan teknik regularisasi untuk mengurangi overfitting. XGBoost juga memiliki parameter yang dapat disesuaikan untuk memaksimalkan kinerja model sesuai dengan karakteristik dataset yang digunakan. Petama Penulis melakukan XGBoost untuk klasifikasi bertujuan untuk melatih, memprediksi, dan mengevaluasi model klasifikasi. AdaBoost untuk regresi, AdaBoost memberikan bobot yang berbeda pada setiap sampel data pada setiap iterasi, fokus pada sampel yang salah diklasifikasikan untuk melatih dan mengevaluasi model regresi menggunakan algoritma AdaBoost (Adaptive Boosting).
-     **_(gambarXbost)_**
+- 3. XGBoost: XGBoost (Extreme Gradient Boosting) adalah algoritma yang berbasis pada teknik gradient boosting dan sangat populer karena kemampuannya untuk memberikan akurasi tinggi dengan waktu komputasi yang efisien. XGBoost membangun model secara bertahap, dengan setiap model baru memperbaiki kesalahan model sebelumnya. Dalam prediksi pemilihan tanaman, XGBoost sangat baik untuk menangani data dengan banyak fitur dan menghasilkan rekomendasi yang lebih tepat dengan menggunakan teknik regularisasi untuk mengurangi overfitting. XGBoost juga memiliki parameter yang dapat disesuaikan untuk memaksimalkan kinerja model sesuai dengan karakteristik dataset yang digunakan. Petama Penulis melakukan XGBoost untuk klasifikasi bertujuan untuk melatih, memprediksi, dan mengevaluasi model klasifikasi. AdaBoost untuk regresi, AdaBoost memberikan bobot yang berbeda pada setiap sampel data pada setiap iterasi, fokus pada sampel yang salah diklasifikasikan untuk melatih dan mengevaluasi model regresi menggunakan algoritma AdaBoost (Adaptive Boosting).<br>
+![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/XGBoost.png?raw=true)<br>
+gambar 11. algoritma  XGBoost <br>
 
 ## Evaluation
 
 Metrik evaluasi yang digunakan pada proyek ini adalah mean squared error (MSE) dan menggunakan Accuracy (%), Precision (%), dan Recall (%). Mean squared error (MSE) mengukur error dalam model statistik dengan cara menghitung rata-rata error dari kuadrat hasil aktual dikurang hasil prediksi. Berikut merupakan formula MSE: <br/>
 $$\text{MSE}(y, \hat{y}) = \frac{\sum_{i=0}^{N - 1} (y_i - \hat{y}_i)^2}{N}$$
-Evaluasi menggunakan Accuracy, Precision, dan Recall bertujuan untuk memberikan gambaran yang lebih komprehensif tentang performa model dalam menangani data, khususnya dalam konteks klasifikasi. Masing-masing metrik ini memberikan informasi yang berbeda mengenai kualitas prediksi model. Berikut adalah penjelasan tentang kegunaan masing-masing metrik:
+Evaluasi menggunakan Accuracy, Precision, dan Recall bertujuan untuk memberikan gambaran yang lebih komprehensif tentang performa model dalam menangani data, khususnya dalam konteks klasifikasi. Masing-masing metrik ini memberikan informasi yang berbeda mengenai kualitas prediksi model. Berikut adalah penjelasan tentang kegunaan masing-masing metrik:<br>
 
-- Accuracy memberikan gambaran umum performa model.
-  **_(gambarXbost)_**
-- Precision adalah metrik evaluasi yang mengukur seberapa tepat model Anda dalam membuat prediksi positif. Artinya, dari semua prediksi positif yang dibuat oleh model, berapa banyak yang benar-benar positif.
-  **_(gambarXbost)_**
+- Accuracy memberikan gambaran umum performa model.<br>
+![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/formula%20accuracy.png?raw=true)<br>
+gambar 12. formula accuracy <br>
+ 
+- Precision adalah metrik evaluasi yang mengukur seberapa tepat model Anda dalam membuat prediksi positif. Artinya, dari semua prediksi positif yang dibuat oleh model, berapa banyak yang benar-benar positif.<br>
+gambar 13. formula precision <br>
 - Recall, yang merupakan harmoni antara precision dan recall, dapat digunakan jika Anda ingin menggabungkan keduanya menjadi satu metrik untuk evaluasi yang lebih menyeluruh.
-  **_(gambarXbost)_**
+![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/formula%20precision.png?raw=true)
+gambar 114. formula Recall<br>
 
 ## Referensi
 
