@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/52db7582-c52c-4cd6-9546-904db6ef1984)# Laporan Proyek Machine Learning - Okta Agnes Ladyagatha Manik
+# Laporan Proyek Machine Learning - Okta Agnes Ladyagatha Manik
 
 ## Domain Proyek
 
