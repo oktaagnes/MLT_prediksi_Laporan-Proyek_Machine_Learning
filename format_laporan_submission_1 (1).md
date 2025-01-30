@@ -71,9 +71,9 @@ gambar 5. matriks <br>
 ## Data Preparation
 Dalam data preparation, 4 hal yang akan dilakukan sebelum memasukkan data ke model latih:
 <li> Principal Component Analysis (PCA), sebuah teknik yang digunakan untuk mengubah data dengan banyak variabel (fitur) menjadi representasi yang lebih sederhana, sambil tetap mempertahankan sebagian besar informasi yang terkandung dalam data asli. PCA digunakan untuk mengurangi kompleksitas data, menghilangkan korelasi antar variabel, serta meningkatkan interpretabilitas tanpa mengorbankan informasi penting dalam data.</li>
-<li>Encoding Fitur Kategorik : Encoding fitur kategorik dilaksanakan di beberapa fitur yang bertipe object. Hal ini dilakukan karena model machine learning hanya dapat menerima data dalam bentuk numerik. Untuk encoding fitur menggunakan LabelEncoder.
+<li>Encoding Fitur Kategorik : Encoding fitur kategorik dilaksanakan di beberapa fitur yang bertipe object. Hal ini dilakukan karena model machine learning hanya dapat menerima data dalam bentuk numerik. Untuk encoding fitur menggunakan LabelEncoder.</li>
 ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/encoding.png?raw=true) <br>
-gambar 6. label encoding<br></li>
+gambar 6. label encoding
 <li>Pembagian dataset, penulis memisahkan variabel independen (N, P, K, suhu, kelembaban, pH, curah hujan) sebagai data.<li>
 𝑋 
 X, dan variabel dependen (label) sebagai data.
