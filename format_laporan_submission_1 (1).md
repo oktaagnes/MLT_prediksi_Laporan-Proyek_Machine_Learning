@@ -30,7 +30,7 @@ Penggunaan sistem prediksi berbasis data dan teknologi informasi dapat membantu 
 
 ## Data Understanding
 
-Dataset yang digunakan dalam proyek ini berisi informasi historis tentang kondisi lahan pertanian, termasuk fitur-fitur seperti kandungan N (Nitrogen), P (Phosphorus), K (Kalium), suhu, kelembapan, pH tanah, dan curah hujan. Data ini akan digunakan untuk melatih model machine learning yang bertujuan memprediksi jenis tanaman yang paling cocok untuk ditanam di lahan tertentu serta menganalisis perubahan kondisi lahan untuk memberikan rekomendasi tanaman yang optimal di masa depan.
+Dataset yang digunakan dalam proyek ini berisi informasi historis tentang kondisi lahan pertanian, termasuk fitur-fitur seperti kandungan N (Nitrogen), P (Phosphorus), K (Kalium), suhu, kelembapan, pH tanah, dan curah hujan. Data ini akan digunakan untuk melatih model machine learning yang bertujuan memprediksi jenis tanaman yang paling cocok untuk ditanam di lahan tertentu serta menganalisis perubahan kondisi lahan untuk memberikan rekomendasi tanaman yang optimal di masa depan.<br>
 Land Dataset: (https://www.kaggle.com/datasets/siddharthss/crop-recommendation-dataset).
 
 ### Variabel-variabel pada land dataset adalah sebagai berikut:
@@ -77,7 +77,7 @@ Sebelum melanjutkan ke tahap pembagian dataset, penulis memisahkan variabel inde
 X, dan variabel dependen (label) sebagai data.<br>
 𝑦.<br>
 y. Mengingat bahwa fitur label dalam dataset bersifat non-numerik (kategorikal), teknik label encoding diterapkan untuk mengonversi data tersebut menjadi representasi numerik yang kompatibel dengan model..<br>
-![alt text](![image](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/encoding.png?raw=true) <br>
+![alt text]((https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/encoding.png?raw=true) <br>
 gambar 6. label encoding<br>
 
 Selanjutnya, penulis membagi dataset menjadi dua bagian, yaitu training set dan test set. Pembagian ini penting untuk menghindari risiko overfitting, yang terjadi ketika model "menghafal" data latih dan tidak dapat generalisasi dengan baik pada data yang belum pernah dilihat sebelumnya. Dengan membagi dataset, model dapat diuji untuk memastikan kemampuannya dalam memprediksi data yang baru dan tidak terduga.<br>
