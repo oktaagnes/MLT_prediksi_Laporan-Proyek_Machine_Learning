@@ -71,18 +71,18 @@ gambar 5. matriks <br>
 ## Data Preparation
 Dalam data preparation, 4 hal yang akan dilakukan sebelum memasukkan data ke model latih:
 <li> Principal Component Analysis (PCA), sebuah teknik yang digunakan untuk mengubah data dengan banyak variabel (fitur) menjadi representasi yang lebih sederhana, sambil tetap mempertahankan sebagian besar informasi yang terkandung dalam data asli. PCA digunakan untuk mengurangi kompleksitas data, menghilangkan korelasi antar variabel, serta meningkatkan interpretabilitas tanpa mengorbankan informasi penting dalam data.</li>
-<li>Encoding Fitur Kategorik : Encoding fitur kategorik dilaksanakan di beberapa fitur yang bertipe object. Hal ini dilakukan karena model machine learning hanya dapat menerima data dalam bentuk numerik. Untuk encoding fitur menggunakan LabelEncoder.</li>
+<li>Encoding Fitur Kategorik : Encoding fitur kategorik dilaksanakan di beberapa fitur yang bertipe object. Hal ini dilakukan karena model machine learning hanya dapat menerima data dalam bentuk numerik. Untuk encoding fitur menggunakan LabelEncoder.
 ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/encoding.png?raw=true) <br>
-gambar 6. label encoding<br>
+gambar 6. label encoding<br></li>
 <li>Pembagian dataset, penulis memisahkan variabel independen (N, P, K, suhu, kelembaban, pH, curah hujan) sebagai data.<li>
 𝑋 
 X, dan variabel dependen (label) sebagai data.
 𝑦.<br>
 <li>Membagi dataset menjadi dua bagian, yaitu training set dan test set. Pembagian ini penting untuk menghindari risiko overfitting, yang terjadi ketika model "menghafal" data latih dan tidak dapat generalisasi dengan baik pada data yang belum pernah dilihat sebelumnya. Dengan membagi dataset, model dapat diuji untuk memastikan kemampuannya dalam memprediksi data yang baru dan tidak terduga.<br>
-![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/pembagian%20dataset.png?raw=true)/li> <br>
-gambar 7. training set dan test set<br>
+![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/pembagian%20dataset.png?raw=true)<br>
+gambar 7. training set dan test set<br></li> 
 
-Untuk memastikan kualitas dataset yang digunakan, penulis juga menerapkan metode berbasis density untuk mendeteksi outlier dalam dataset. Selain itu, proses standarisasi data dilakukan untuk memastikan bahwa seluruh nilai dari fitur numerik, baik pada data latih maupun data uji, berada dalam skala yang seragam, sehingga model dapat memproses data dengan lebih baik dan menghasilkan prediksi yang akurat.
+Mendeteksi outlier dalam dataset menggunakan metode berbasis density . Selain itu, proses standarisasi data dilakukan untuk memastikan bahwa seluruh nilai dari fitur numerik, baik pada data latih maupun data uji, berada dalam skala yang seragam, sehingga model dapat memproses data dengan lebih baik dan menghasilkan prediksi yang akurat.
 
 ## Modeling
 
