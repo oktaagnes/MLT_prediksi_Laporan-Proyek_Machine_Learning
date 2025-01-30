@@ -77,7 +77,7 @@ Sebelum melanjutkan ke tahap pembagian dataset, penulis memisahkan variabel inde
 X, dan variabel dependen (label) sebagai data.<br>
 𝑦.<br>
 y. Mengingat bahwa fitur label dalam dataset bersifat non-numerik (kategorikal), teknik label encoding diterapkan untuk mengonversi data tersebut menjadi representasi numerik yang kompatibel dengan model..<br>
-![alt text]((https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/encoding.png?raw=true) <br>
+![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/encoding.png?raw=true) <br>
 gambar 6. label encoding<br>
 
 Selanjutnya, penulis membagi dataset menjadi dua bagian, yaitu training set dan test set. Pembagian ini penting untuk menghindari risiko overfitting, yang terjadi ketika model "menghafal" data latih dan tidak dapat generalisasi dengan baik pada data yang belum pernah dilihat sebelumnya. Dengan membagi dataset, model dapat diuji untuk memastikan kemampuannya dalam memprediksi data yang baru dan tidak terduga.<br>
