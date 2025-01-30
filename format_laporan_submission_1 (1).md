@@ -72,15 +72,11 @@ gambar 5. matriks <br>
 Dalam data preparation, 4 hal yang akan dilakukan sebelum memasukkan data ke model latih:
 <li> Principal Component Analysis (PCA), sebuah teknik yang digunakan untuk mengubah data dengan banyak variabel (fitur) menjadi representasi yang lebih sederhana, sambil tetap mempertahankan sebagian besar informasi yang terkandung dalam data asli. PCA digunakan untuk mengurangi kompleksitas data, menghilangkan korelasi antar variabel, serta meningkatkan interpretabilitas tanpa mengorbankan informasi penting dalam data.</li>
 <li>Encoding Fitur Kategorik : Encoding fitur kategorik dilaksanakan di beberapa fitur yang bertipe object. Hal ini dilakukan karena model machine learning hanya dapat menerima data dalam bentuk numerik. Untuk encoding fitur menggunakan LabelEncoder.</li>
-![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/encoding.png?raw=true) <br>
-gambar 6. label encoding
 <li>Pembagian dataset, penulis memisahkan variabel independen (N, P, K, suhu, kelembaban, pH, curah hujan) sebagai data.<li>
 𝑋 
 X, dan variabel dependen (label) sebagai data.
 𝑦.<br>
 <li>Membagi dataset menjadi dua bagian, yaitu training set dan test set. Pembagian ini penting untuk menghindari risiko overfitting, yang terjadi ketika model "menghafal" data latih dan tidak dapat generalisasi dengan baik pada data yang belum pernah dilihat sebelumnya. Dengan membagi dataset, model dapat diuji untuk memastikan kemampuannya dalam memprediksi data yang baru dan tidak terduga.<br>
-![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/pembagian%20dataset.png?raw=true)<br>
-gambar 7. training set dan test set<br></li> 
 
 Mendeteksi outlier dalam dataset menggunakan metode berbasis density . Selain itu, proses standarisasi data dilakukan untuk memastikan bahwa seluruh nilai dari fitur numerik, baik pada data latih maupun data uji, berada dalam skala yang seragam, sehingga model dapat memproses data dengan lebih baik dan menghasilkan prediksi yang akurat.
 
@@ -91,20 +87,20 @@ Metode yang penulis pilih untuk memprediksi jenis tanaman yang paling sesuai den
 - 1. K-Nearest Neighbor (KNN): KNN adalah algoritma berbasis instance yang digunakan untuk menemukan kecocokan antara kondisi lahan dan tanaman yang ada dalam dataset. Pada KNN, setiap titik data (dalam hal ini, kondisi lahan) dibandingkan dengan titik data lainnya, dan tanaman yang paling sering muncul di antara titik data terdekat akan dipilih sebagai rekomendasi. Kelebihan KNN adalah kesederhanaannya dan kemampuannya untuk memberikan prediksi berdasarkan data yang ada tanpa perlu melatih model secara intensif. KNN sangat efektif dalam menangani data dengan hubungan yang tidak linier dan memerlukan sedikit asumsi tentang distribusi data.
      Penulis pertama melakukan proses tuning atau optimasi parameter pada algoritma K-Nearest Neighbors Regressor (KNN Regressor) menggunakan bahasa pemrograman Python dan library Scikit-learn. Secara spesifik, proses yang dilakukan adalah mencari nilai k (jumlah tetangga terdekat) yang optimal untuk model KNN Regressor. gambar di bawah menunjukan nilai K yang optimal yaitu 7.
 ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/tuning%20.png?raw=true) <br>
-gambar 8. tuning dari algoritma KNN <br>
+gambar 6. tuning dari algoritma KNN <br>
 
 Selanjutnya, Klasifikasi KNN (KNN Classifier): Digunakan untuk mengklasifikasikan data ke dalam kategori.<br>
 ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/cnn.png?raw=true)<br>
-gambar 9. algoritma K-Nearest Neighbor (KNN) <br>
+gambar 7. algoritma K-Nearest Neighbor (KNN) <br>
 
 - 2. Random Forest: Random Forest adalah algoritma ensemble yang terdiri dari banyak pohon keputusan (decision trees) yang bekerja bersama-sama untuk meningkatkan akurasi prediksi. Setiap pohon keputusan dilatih menggunakan subset acak dari data, dan hasil akhir dihitung berdasarkan prediksi mayoritas dari seluruh pohon. Dalam konteks prediksi tanaman, Random Forest dapat menangani berbagai faktor tanah dan iklim dengan cara yang lebih fleksibel dan mengurangi risiko overfitting. Algoritma ini sangat kuat dalam menangani variabel yang memiliki interaksi kompleks, seperti suhu, kelembapan, pH, dan unsur hara tanah (N, P, K).
      Penulis melakukan proses Klasifikasi (RandomForestClassifier) yang mana Digunakan untuk memprediksi label kelas (kategori). Outputnya berupa kelas atau probabilitas keanggotaan kelas. Evaluasinya menggunakan metrik seperti akurasi, precision, recall, dan f1-score. Selanjutnya, Regresi (RandomForestRegressor): Digunakan untuk memprediksi nilai numerik kontinu. Outputnya berupa nilai numerik. Evaluasinya menggunakan metrik seperti MSE, RMSE (Root Mean Squared Error), dan MAE (Mean Absolute Error).
 ![alt text]()
-gambar 10. algoritma Random Forest (rf) <br>
+gambar 8. algoritma Random Forest (rf) <br>
 
 - 3. XGBoost: XGBoost (Extreme Gradient Boosting) adalah algoritma yang berbasis pada teknik gradient boosting dan sangat populer karena kemampuannya untuk memberikan akurasi tinggi dengan waktu komputasi yang efisien. XGBoost membangun model secara bertahap, dengan setiap model baru memperbaiki kesalahan model sebelumnya. Dalam prediksi pemilihan tanaman, XGBoost sangat baik untuk menangani data dengan banyak fitur dan menghasilkan rekomendasi yang lebih tepat dengan menggunakan teknik regularisasi untuk mengurangi overfitting. XGBoost juga memiliki parameter yang dapat disesuaikan untuk memaksimalkan kinerja model sesuai dengan karakteristik dataset yang digunakan. Petama Penulis melakukan XGBoost untuk klasifikasi bertujuan untuk melatih, memprediksi, dan mengevaluasi model klasifikasi. AdaBoost untuk regresi, AdaBoost memberikan bobot yang berbeda pada setiap sampel data pada setiap iterasi, fokus pada sampel yang salah diklasifikasikan untuk melatih dan mengevaluasi model regresi menggunakan algoritma AdaBoost (Adaptive Boosting).<br>
 ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/XGBoost.png?raw=true)<br>
-gambar 11. algoritma  XGBoost <br>
+gambar 9. algoritma  XGBoost <br>
 
 ## Evaluation
 
@@ -114,13 +110,13 @@ Evaluasi menggunakan Accuracy, Precision, dan Recall bertujuan untuk memberikan 
 
 - Accuracy memberikan gambaran umum performa model.<br>
 ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/formula%20accuracy.png?raw=true)<br>
-gambar 12. formula accuracy <br>
+gambar 10. formula accuracy <br>
 - Precision adalah metrik evaluasi yang mengukur seberapa tepat model Anda dalam membuat prediksi positif. Artinya, dari semua prediksi positif yang dibuat oleh model, berapa banyak yang benar-benar positif.<br>
 ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/formula%20precision.png?raw=true)
-gambar 13. formula precision <br>
+gambar 11. formula precision <br>
 - Recall, yang merupakan harmoni antara precision dan recall, dapat digunakan jika Anda ingin menggabungkan keduanya menjadi satu metrik untuk evaluasi yang lebih menyeluruh.<br>
 ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/formula%20recall.png?raw=true)<br>
-gambar 114. formula Recall<br>
+gambar 12. formula Recall<br>
 
 ## Referensi
 
