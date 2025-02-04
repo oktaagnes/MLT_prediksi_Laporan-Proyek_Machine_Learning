@@ -120,6 +120,10 @@ gambar 12. formula Recall<br>
 Berikut hasil Evaluasi dari algoritma  K-Nearest Neighbor (KNN), Random Forest dan XGBoost. Menggunakan Accuray, precision dan recall.
 ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/akurasi.png)<br>
 gambar 12. hasil evaluasi<br>
+
+## Kesimpulan 
+Berdasarkan hasil evaluasi model di atas, dapat disimpulkan bahwa model terbaik untuk melakukan prediksi Pemilihan Jenis Tanaman untuk Lahan Pertanian adalah  model Random Forest dapat dianggap sebagai model terbaik untuk digunakan dalam kasus ini karena memiliki *accuracy *99%.
+
 ## Referensi
 
 - [1] http://eprints.bsi.ac.id/index.php/co-science/article/view/2987/1686 <br>
