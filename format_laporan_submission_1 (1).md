@@ -88,23 +88,23 @@ Metode yang penulis pilih untuk memprediksi jenis tanaman yang paling sesuai den
      Metode K-Nearest Neighbors (KNN) digunakan untuk melakukan regresi dan klasifikasi dengan berbagai parameter yang disesuaikan guna mendapatkan performa terbaik. Parameter utama yang digunakan dalam model regresi KNeighborsRegressor adalah n_neighbors, yang menentukan jumlah tetangga terdekat dalam proses prediksi. Untuk menentukan nilai optimal dari parameter ini, dilakukan pengujian dengan variasi nilai n_neighbors dari 1 hingga 20, dan hasil evaluasi menggunakan Mean Squared Error (MSE) menunjukkan bahwa nilai optimal adalah n_neighbors = 7, karena memberikan nilai MSE terkecil.
      Selain itu, untuk model klasifikasi, digunakan KNeighborsClassifier dengan parameter utama yang sama, yaitu n_neighbors, yang dalam penelitian ini ditetapkan sebesar 3. Model klasifikasi dievaluasi menggunakan classification report, yang mencakup metrik precision, recall, dan F1-score, guna menilai kinerja model dalam mengklasifikasikan data dengan lebih akurat. Hasil evaluasi menunjukkan bahwa pemilihan nilai n_neighbors = 3 memberikan performa klasifikasi yang baik berdasarkan hasil evaluasi metrik tersebut. Dengan demikian, parameter utama dalam penelitian ini mencakup n_neighbors = 7 untuk regresi dan n_neighbors = 3 untuk klasifikasi, yang diperoleh berdasarkan analisis performa model terhadap berbagai nilai parameter yang diuji.<br>
 ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/cnn.png) <br>
-gambar 6. Gambar tabel algoritma KNN <br>
+gambar 6. algoritma KNN <br>
 
 - 2. Random Forest: Random Forest adalah algoritma ensemble yang terdiri dari banyak pohon keputusan (decision trees) yang bekerja bersama-sama untuk meningkatkan akurasi prediksi. Setiap pohon keputusan dilatih menggunakan subset acak dari data, dan hasil akhir dihitung berdasarkan prediksi mayoritas dari seluruh pohon. Dalam konteks prediksi tanaman, Random Forest dapat menangani berbagai faktor tanah dan iklim dengan cara yang lebih fleksibel dan mengurangi risiko overfitting. Algoritma ini sangat kuat dalam menangani variabel yang memiliki interaksi kompleks, seperti suhu, kelembapan, pH, dan unsur hara tanah (N, P, K). Terdapat beberapa parameter yang digunakan untuk menginisialisasi model Random Forest, baik untuk classification maupun regression. Pada RandomForestClassifier, parameter yang digunakan antara lain adalah n_estimators yang bernilai 100, yang menentukan jumlah pohon keputusan (decision trees) yang akan dibangun dalam model. Semakin banyak jumlah pohon, model biasanya akan lebih akurat, meskipun membutuhkan waktu komputasi yang lebih lama. Selain itu, random_state yang bernilai 42 digunakan untuk memastikan bahwa hasil yang diperoleh dapat direproduksi setiap kali kode dijalankan, sehingga eksperimen dapat diulang dengan hasil yang konsisten. Sementara itu, untuk bagian lain dari kode yang menggunakan RandomForestClassifier, parameter random_state bernilai 18, yang juga berfungsi untuk memastikan hasil yang konsisten. Pada bagian lain, model RandomForestRegressor diinisialisasi dengan parameter n_estimators yang bernilai 30, yang menunjukkan jumlah pohon keputusan dalam model regresi. Selain itu, parameter max_depth diatur sebesar 16, yang membatasi kedalaman maksimum setiap pohon dalam hutan acak untuk menghindari model yang terlalu kompleks dan mengurangi kemungkinan overfitting.<br>
 ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/cnn.png?raw=true()) <br>
-gambar 8. Gambar tabel Galgoritma Random Forest (rf) <br>
+gambar 8. algoritma Random Forest (rf) <br>
 
 - 3. XGBoost: XGBoost (Extreme Gradient Boosting) adalah algoritma yang berbasis pada teknik gradient boosting dan sangat populer karena kemampuannya untuk memberikan akurasi tinggi dengan waktu komputasi yang efisien. XGBoost membangun model secara bertahap, dengan setiap model baru memperbaiki kesalahan model sebelumnya. Dalam prediksi pemilihan tanaman, XGBoost sangat baik untuk menangani data dengan banyak fitur dan menghasilkan rekomendasi yang lebih tepat dengan menggunakan teknik regularisasi untuk mengurangi overfitting. Terdapat beberapa parameter yang digunakan untuk menginisialisasi model XGBoost dan AdaBoost, baik untuk klasifikasi maupun regresi. Pada XGBClassifier, parameter objective diatur dengan nilai multi:softmax, yang menunjukkan bahwa model ini digunakan untuk masalah klasifikasi multikelas, di mana setiap sampel hanya dapat memiliki satu label kelas. Selain itu, parameter num_class ditetapkan sebesar 3, yang menunjukkan bahwa model ini akan mengklasifikasikan data ke dalam tiga kelas yang berbeda.
      Sementara itu, pada model AdaBoostRegressor, terdapat dua parameter utama yang digunakan. Pertama, n_estimators yang bernilai 90, yang menentukan jumlah model dasar (misalnya pohon keputusan) yang akan digunakan dalam proses boosting. Semakin banyak model dasar, model dapat menjadi lebih kuat, tetapi dengan risiko overfitting jika jumlahnya terlalu banyak. Kedua, parameter learning_rate diatur sebesar 0.2, yang mengontrol seberapa besar kontribusi setiap model dasar terhadap model akhir. Nilai learning rate yang lebih kecil membuat model lebih stabil, tetapi mungkin memerlukan lebih banyak estimator untuk mencapai hasil yang baik.<br>
 ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/XGBoost.png?raw=true)<br>
-gambar 9. gambar tabel algoritma  XGBoost <br>
+gambar 9. algoritma  XGBoost <br>
 
 ## Evaluation
 
 Metrik evaluasi yang digunakan pada proyek ini adalah mean squared error (MSE) dan menggunakan Accuracy (%), Precision (%), dan Recall (%). Mean squared error (MSE) mengukur error dalam model statistik dengan cara menghitung rata-rata error dari kuadrat hasil aktual dikurang hasil prediksi. Berikut merupakan formula MSE: <br/>
 $$\text{MSE}(y, \hat{y}) = \frac{\sum_{i=0}^{N - 1} (y_i - \hat{y}_i)^2}{N}$$ <br>
 ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/mse.png)<br>
-gambar 9. gambar tabel Mean squared error (MSE) <br>
+gambar 9. Mean squared error (MSE) <br>
 
 Evaluasi menggunakan Accuracy, Precision, dan Recall bertujuan untuk memberikan gambaran yang lebih komprehensif tentang performa model dalam menangani data, khususnya dalam konteks klasifikasi. Masing-masing metrik ini memberikan informasi yang berbeda mengenai kualitas prediksi model. Berikut adalah penjelasan tentang kegunaan masing-masing metrik:<br>
 
@@ -117,7 +117,9 @@ gambar 11. formula precision <br>
 - Recall, yang merupakan harmoni antara precision dan recall, dapat digunakan jika Anda ingin menggabungkan keduanya menjadi satu metrik untuk evaluasi yang lebih menyeluruh.<br>
 ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/formula%20recall.png?raw=true)<br>
 gambar 12. formula Recall<br>
-
+Berikut hasil Evaluasi dari algoritma  K-Nearest Neighbor (KNN), Random Forest dan XGBoost. Menggunakan Accuray, precision dan recall.
+![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/akurasi.png)<br>
+gambar 12. hasil evaluasi<br>
 ## Referensi
 
 - [1] http://eprints.bsi.ac.id/index.php/co-science/article/view/2987/1686 <br>
