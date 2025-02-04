@@ -52,17 +52,17 @@ gambar 1. keluaran dari built-in function bahasa pemrograman Python pada dataset
 
 Kedua, dengan menggunakan .describe() penulis dapat mengetahui statistik dasar dari data seperti percentile, mean, standar deviasi, jumlah data, min, dan max. Hasil fungsi ini ditampilkan pada tabel 2 seperti berikut.
 ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/2.png?raw=true)<br>
-gambar 2. statistik dataset land_df hasil dari fungsi .describe()<br>
+gambar 2. keluaran dari statistik dataset land_df hasil dari fungsi .describe()<br>
 
 Pada notebooks dilakukan visualisasi untuk membandingkan rerata data keseluruhan yang bertipe house dan yang bertipe unit. Didapatkan bahwa rerata harga rumah yang bertipe house lebih tinggi daripada rerata harga rumah yang bertipe unit.
 
 Pada atribut fitur price dilakukan visualisasi data seperti tampak di gambar 3, visualisasi harga yang dilakukan adalah dengan memanfaatkan histogram untuk mengetahui jumlah data pada masing-masing rentang harga rumah yang ada didataset.<br>
 ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/sebaranpng.png?raw=true)<br>
-gambar 3. sebaran data numerikal <br>
+gambar 3. visual sebaran data numerikal <br>
 
 Pada atribut fitur price dilakukan visualisasi data seperti tampak di gambar 3, visualisasi harga yang dilakukan adalah dengan memanfaatkan histogram untuk mengetahui jumlah data pada masing-masing rentang harga rumah yang ada didataset.<br>
 ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/sebaran%20label.png?raw=true)<br>
-gambar 4. sebaran data katrgorikal <br>
+gambar 4. visual sebaran data katrgorikal <br>
 
 Selanjutnya untuk mengetahui hubungan masing-masing fitur terhadap satu sama lain dihitung korelasinya. Menghasilkan bahwa fitur price memiliki korelasi positif terhadap fitur jumlah bedrooms. Karena terdapat sejumlah data yang tidak konsisten, dalam arti ada data yang jumlah bedrooms yang tinggi tetapi memiliki price yang tinggi dan ada juga rendah. Dengan begitu nilai korelasi tidak mendekati positif satu, hanya bernilai 0.48.<br>
 ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/matrix.png?raw=true) <br>
@@ -85,9 +85,11 @@ Mendeteksi outlier dalam dataset menggunakan metode berbasis density . Selain it
 Metode yang penulis pilih untuk memprediksi jenis tanaman yang paling sesuai dengan kondisi lahan, proyek ini menggunakan tiga algoritma machine learning yang kuat dan populer, yaitu K-Nearest Neighbor (KNN), Random Forest, dan XGBoost. Ketiga algoritma ini dipilih karena kemampuannya dalam menangani data numerik yang kompleks dan memberikan hasil yang akurat dalam klasifikasi dan regresi.
 
 - 1. K-Nearest Neighbor (KNN): KNN adalah algoritma berbasis instance yang digunakan untuk menemukan kecocokan antara kondisi lahan dan tanaman yang ada dalam dataset. Pada KNN, setiap titik data (dalam hal ini, kondisi lahan) dibandingkan dengan titik data lainnya, dan tanaman yang paling sering muncul di antara titik data terdekat akan dipilih sebagai rekomendasi. Kelebihan KNN adalah kesederhanaannya dan kemampuannya untuk memberikan prediksi berdasarkan data yang ada tanpa perlu melatih model secara intensif. KNN sangat efektif dalam menangani data dengan hubungan yang tidak linier dan memerlukan sedikit asumsi tentang distribusi data.
-     Penulis pertama melakukan proses tuning atau optimasi parameter pada algoritma K-Nearest Neighbors Regressor (KNN Regressor) menggunakan bahasa pemrograman Python dan library Scikit-learn. Secara spesifik, proses yang dilakukan adalah mencari nilai k (jumlah tetangga terdekat) yang optimal untuk model KNN Regressor. gambar di bawah menunjukan minimal error dari algoritma KNN dengan nilai K yang optimal yaitu 7.<br>
-![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/cnn.png) <br>
-gambar 6. nilai K dari algoritma KNN <br>
+     Metode K-Nearest Neighbors (KNN) digunakan untuk melakukan regresi dan klasifikasi dengan berbagai parameter yang disesuaikan guna mendapatkan performa terbaik. Parameter utama yang digunakan dalam model regresi KNeighborsRegressor adalah n_neighbors, yang menentukan jumlah tetangga terdekat dalam proses prediksi. Untuk menentukan nilai optimal dari parameter ini, dilakukan pengujian dengan variasi nilai n_neighbors dari 1 hingga 20, dan hasil evaluasi menggunakan Mean Squared Error (MSE) menunjukkan bahwa nilai optimal adalah n_neighbors = 7, karena memberikan nilai MSE terkecil.
+
+Selain itu, untuk model klasifikasi, digunakan KNeighborsClassifier dengan parameter utama yang sama, yaitu n_neighbors, yang dalam penelitian ini ditetapkan sebesar 3. Model klasifikasi dievaluasi menggunakan classification report, yang mencakup metrik precision, recall, dan F1-score, guna menilai kinerja model dalam mengklasifikasikan data dengan lebih akurat. Hasil evaluasi menunjukkan bahwa pemilihan nilai n_neighbors = 3 memberikan performa klasifikasi yang baik berdasarkan hasil evaluasi metrik tersebut.
+
+Dengan demikian, parameter utama dalam penelitian ini mencakup n_neighbors = 7 untuk regresi dan n_neighbors = 3 untuk klasifikasi, yang diperoleh berdasarkan analisis performa model terhadap berbagai nilai parameter yang diuji.<br>
 ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/knn.png?raw=true) <br>
 gambar 6. minimum nilai error dari algoritma KNN <br>
 
