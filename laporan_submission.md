@@ -78,6 +78,8 @@ Q1 (Kuartil 1) = nilai 25% data terendah
 Q3 (Kuartil 3) = nilai 75% data terendah
 Batas bawah = Q1 - (1.5 × IQR)
 Batas atas = Q3 + (1.5 × IQR).</li>
+![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/rumusiqr.png?raw=true) <br>
+gambar 6. rumus IQR <br>
 <li> Principal Component Analysis (PCA), sebuah teknik yang digunakan untuk mengubah data dengan banyak variabel (fitur) menjadi representasi yang lebih sederhana, sambil tetap mempertahankan sebagian besar informasi yang terkandung dalam data asli. PCA digunakan untuk mengurangi kompleksitas data, menghilangkan korelasi antar variabel, serta meningkatkan interpretabilitas tanpa mengorbankan informasi penting dalam data.</li>
 <li>Encoding Fitur Kategorik : Encoding fitur kategorik dilaksanakan di beberapa fitur yang bertipe object. Hal ini dilakukan karena model machine learning hanya dapat menerima data dalam bentuk numerik. Untuk encoding fitur menggunakan LabelEncoder.</li>
 <li>Pembagian dataset, penulis memisahkan variabel independen (N, P, K, suhu, kelembaban, pH, curah hujan) sebagai data.
@@ -95,7 +97,7 @@ Metode yang penulis pilih untuk memprediksi jenis tanaman yang paling sesuai den
      Metode K-Nearest Neighbors (KNN) digunakan untuk melakukan regresi dan klasifikasi dengan berbagai parameter yang disesuaikan guna mendapatkan performa terbaik. Parameter utama yang digunakan dalam model regresi KNeighborsRegressor adalah n_neighbors, yang menentukan jumlah tetangga terdekat dalam proses prediksi. Untuk menentukan nilai optimal dari parameter ini, dilakukan pengujian dengan variasi nilai n_neighbors dari 1 hingga 20, dan hasil evaluasi menggunakan Mean Squared Error (MSE) menunjukkan bahwa nilai optimal adalah n_neighbors = 7, karena memberikan nilai MSE terkecil.
      Selain itu, untuk model klasifikasi, digunakan KNeighborsClassifier dengan parameter utama yang sama, yaitu n_neighbors, yang dalam penelitian ini ditetapkan sebesar 3. Model klasifikasi dievaluasi menggunakan classification report, yang mencakup metrik precision, recall, dan F1-score, guna menilai kinerja model dalam mengklasifikasikan data dengan lebih akurat. Hasil evaluasi menunjukkan bahwa pemilihan nilai n_neighbors = 3 memberikan performa klasifikasi yang baik berdasarkan hasil evaluasi metrik tersebut. Dengan demikian, parameter utama dalam penelitian ini mencakup n_neighbors = 7 untuk regresi dan n_neighbors = 3 untuk klasifikasi, yang diperoleh berdasarkan analisis performa model terhadap berbagai nilai parameter yang diuji.<br>
      ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/cnn.png) <br>
-     gambar 6. algoritma KNN <br>
+     gambar 7. algoritma KNN <br>
 
 - 2. Random Forest: Random Forest adalah algoritma ensemble yang terdiri dari banyak pohon keputusan (decision trees) yang bekerja bersama-sama untuk meningkatkan akurasi prediksi. Setiap pohon keputusan dilatih menggunakan subset acak dari data, dan hasil akhir dihitung berdasarkan prediksi mayoritas dari seluruh pohon. Dalam konteks prediksi tanaman, Random Forest dapat menangani berbagai faktor tanah dan iklim dengan cara yang lebih fleksibel dan mengurangi risiko overfitting. Algoritma ini sangat kuat dalam menangani variabel yang memiliki interaksi kompleks, seperti suhu, kelembapan, pH, dan unsur hara tanah (N, P, K). Terdapat beberapa parameter yang digunakan untuk menginisialisasi model Random Forest, baik untuk classification maupun regression. Pada RandomForestClassifier, parameter yang digunakan antara lain adalah n_estimators yang bernilai 100, yang menentukan jumlah pohon keputusan (decision trees) yang akan dibangun dalam model. Semakin banyak jumlah pohon, model biasanya akan lebih akurat, meskipun membutuhkan waktu komputasi yang lebih lama. Selain itu, random_state yang bernilai 42 digunakan untuk memastikan bahwa hasil yang diperoleh dapat direproduksi setiap kali kode dijalankan, sehingga eksperimen dapat diulang dengan hasil yang konsisten. Sementara itu, untuk bagian lain dari kode yang menggunakan RandomForestClassifier, parameter random_state bernilai 18, yang juga berfungsi untuk memastikan hasil yang konsisten. Pada bagian lain, model RandomForestRegressor diinisialisasi dengan parameter n_estimators yang bernilai 30, yang menunjukkan jumlah pohon keputusan dalam model regresi. Selain itu, parameter max_depth diatur sebesar 16, yang membatasi kedalaman maksimum setiap pohon dalam hutan acak untuk menghindari model yang terlalu kompleks dan mengurangi kemungkinan overfitting.<br>
      ![alt text](<https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/cnn.png?raw=true()>) <br>
@@ -111,25 +113,22 @@ Metode yang penulis pilih untuk memprediksi jenis tanaman yang paling sesuai den
 Metrik evaluasi yang digunakan pada proyek ini adalah mean squared error (MSE) dan menggunakan Accuracy (%), Precision (%), dan Recall (%). Mean squared error (MSE) mengukur error dalam model statistik dengan cara menghitung rata-rata error dari kuadrat hasil aktual dikurang hasil prediksi. Berikut merupakan formula MSE: <br/>
 $$\text{MSE}(y, \hat{y}) = \frac{\sum_{i=0}^{N - 1} (y_i - \hat{y}_i)^2}{N}$$ <br>
 ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/mse.png)<br>
-gambar 9. Mean squared error (MSE) <br>
+gambar 10. Mean squared error (MSE) <br>
 
 Evaluasi menggunakan Accuracy, Precision, dan Recall bertujuan untuk memberikan gambaran yang lebih komprehensif tentang performa model dalam menangani data, khususnya dalam konteks klasifikasi. Masing-masing metrik ini memberikan informasi yang berbeda mengenai kualitas prediksi model. Berikut adalah penjelasan tentang kegunaan masing-masing metrik:<br>
 
 - Accuracy memberikan gambaran umum performa model.<br>
   ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/formula%20accuracy.png?raw=true)<br>
-  gambar 10. formula accuracy <br>
+  gambar 11. formula accuracy <br>
 - Precision adalah metrik evaluasi yang mengukur seberapa tepat model Anda dalam membuat prediksi positif. Artinya, dari semua prediksi positif yang dibuat oleh model, berapa banyak yang benar-benar positif.<br>
   ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/formula%20precision.png?raw=true)
-  gambar 11. formula precision <br>
+  gambar 12. formula precision <br>
 - Recall, yang merupakan harmoni antara precision dan recall, dapat digunakan jika Anda ingin menggabungkan keduanya menjadi satu metrik untuk evaluasi yang lebih menyeluruh.<br>
   ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/formula%20recall.png?raw=true)<br>
-  gambar 12. formula Recall<br>
+  gambar 13. formula Recall<br>
   Berikut hasil Evaluasi dari algoritma K-Nearest Neighbor (KNN), Random Forest dan XGBoost. Menggunakan Accuray, precision dan recall.
   ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/akurasi.png)<br>
-  gambar 12. hasil evaluasi<br>
-
-## Kesimpulan
-
+  gambar 14. hasil evaluasi<br>
 Berdasarkan hasil evaluasi model di atas, dapat disimpulkan bahwa model terbaik untuk melakukan prediksi Pemilihan Jenis Tanaman untuk Lahan Pertanian adalah model Random Forest dapat dianggap sebagai model terbaik untuk digunakan dalam kasus ini karena memiliki *accuracy *99%.
 
 ## Referensi
