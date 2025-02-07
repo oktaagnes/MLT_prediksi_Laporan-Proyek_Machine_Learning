@@ -109,12 +109,6 @@ Metode yang penulis pilih untuk memprediksi jenis tanaman yang paling sesuai den
      gambar 9. algoritma XGBoost <br>
 
 ## Evaluation
-
-Metrik evaluasi yang digunakan pada proyek ini adalah mean squared error (MSE) dan menggunakan Accuracy (%), Precision (%), dan Recall (%). Mean squared error (MSE) mengukur error dalam model statistik dengan cara menghitung rata-rata error dari kuadrat hasil aktual dikurang hasil prediksi. Berikut merupakan formula MSE: <br/>
-$$\text{MSE}(y, \hat{y}) = \frac{\sum_{i=0}^{N - 1} (y_i - \hat{y}_i)^2}{N}$$ <br>
-![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/mse.png)<br>
-gambar 10. Mean squared error (MSE) <br>
-
 Evaluasi menggunakan Accuracy, Precision, dan Recall bertujuan untuk memberikan gambaran yang lebih komprehensif tentang performa model dalam menangani data, khususnya dalam konteks klasifikasi. Masing-masing metrik ini memberikan informasi yang berbeda mengenai kualitas prediksi model. Berikut adalah penjelasan tentang kegunaan masing-masing metrik:<br>
 
 - Accuracy memberikan gambaran umum performa model.<br>
@@ -129,7 +123,13 @@ Evaluasi menggunakan Accuracy, Precision, dan Recall bertujuan untuk memberikan 
   Berikut hasil Evaluasi dari algoritma K-Nearest Neighbor (KNN), Random Forest dan XGBoost. Menggunakan Accuray, precision dan recall.
   ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/akurasi.png)<br>
   gambar 14. hasil evaluasi<br>
-Berdasarkan hasil evaluasi model di atas, dapat disimpulkan bahwa model terbaik untuk melakukan prediksi Pemilihan Jenis Tanaman untuk Lahan Pertanian adalah model Random Forest dapat dianggap sebagai model terbaik untuk digunakan dalam kasus ini karena memiliki *accuracy *99%.
+  
+Metrik evaluasi yang digunakan pada proyek ini adalah mean squared error (MSE) dan menggunakan Accuracy (%), Precision (%), dan Recall (%). Mean squared error (MSE) mengukur error dalam model statistik dengan cara menghitung rata-rata error dari kuadrat hasil aktual dikurang hasil prediksi. Berikut merupakan formula MSE: <br/>
+$$\text{MSE}(y, \hat{y}) = \frac{\sum_{i=0}^{N - 1} (y_i - \hat{y}_i)^2}{N}$$ <br>
+![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/mse.png)<br>
+gambar 10. Mean squared error (MSE) <br>
+Berdasarkan hasil evaluasi model di atas, dapat disimpulkan bahwa model terbaik untuk melakukan prediksi Pemilihan Jenis Tanaman untuk Lahan Pertanian adalah model Random Forest dapat dianggap sebagai model terbaik untuk digunakan dalam kasus ini karena memiliki <b> accuracy 99%<b>.
+Model yang diuji berhasil menjawab setiap problem statement dengan baik, terutama dengan performa tinggi dari Random Forest. Model ini dapat digunakan sebagai alat bantu bagi petani untuk memilih jenis tanaman berdasarkan data objektif, mengoptimalkan hasil pertanian, dan beradaptasi dengan perubahan iklim.
 
 ## Referensi
 
