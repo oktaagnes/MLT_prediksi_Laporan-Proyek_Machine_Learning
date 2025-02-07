@@ -78,8 +78,8 @@ Q1 (Kuartil 1) = nilai 25% data terendah
 Q3 (Kuartil 3) = nilai 75% data terendah
 Batas bawah = Q1 - (1.5 × IQR)
 Batas atas = Q3 + (1.5 × IQR).</li> <br>
-**Rumus IQR:**
-\[ IQR = Q3 - Q1 \]
+<p><strong>Rumus IQR:</strong></p>
+    <p>$$ IQR = Q3 - Q1 $$</p>
 <li> Principal Component Analysis (PCA), sebuah teknik yang digunakan untuk mengubah data dengan banyak variabel (fitur) menjadi representasi yang lebih sederhana, sambil tetap mempertahankan sebagian besar informasi yang terkandung dalam data asli. PCA digunakan untuk mengurangi kompleksitas data, menghilangkan korelasi antar variabel, serta meningkatkan interpretabilitas tanpa mengorbankan informasi penting dalam data.</li>
 <li>Encoding Fitur Kategorik : Encoding fitur kategorik dilaksanakan di beberapa fitur yang bertipe object. Hal ini dilakukan karena model machine learning hanya dapat menerima data dalam bentuk numerik. Untuk encoding fitur menggunakan LabelEncoder.</li>
 <li>Pembagian dataset, penulis memisahkan variabel independen (N, P, K, suhu, kelembaban, pH, curah hujan) sebagai data.
