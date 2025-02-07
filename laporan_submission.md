@@ -77,7 +77,7 @@ Dalam data preparation, 6 hal yang akan dilakukan sebelum memasukkan data ke mod
 Q1 (Kuartil 1) = nilai 25% data terendah
 Q3 (Kuartil 3) = nilai 75% data terendah
 Batas bawah = Q1 - (1.5 × IQR)
-Batas atas = Q3 + (1.5 × IQR).</li>
+Batas atas = Q3 + (1.5 × IQR).</li> <br>
 ![alt text](https://github.com/oktaagnes/MLT_prediksi_Laporan-Proyek_Machine_Learning/blob/main/assets/rumusiqr.png?raw=true) <br>
 gambar 6. rumus IQR <br>
 <li> Principal Component Analysis (PCA), sebuah teknik yang digunakan untuk mengubah data dengan banyak variabel (fitur) menjadi representasi yang lebih sederhana, sambil tetap mempertahankan sebagian besar informasi yang terkandung dalam data asli. PCA digunakan untuk mengurangi kompleksitas data, menghilangkan korelasi antar variabel, serta meningkatkan interpretabilitas tanpa mengorbankan informasi penting dalam data.</li>
