@@ -75,8 +75,8 @@ Dalam data preparation, 6 hal yang akan dilakukan sebelum memasukkan data ke mod
 <li>Penghapusan data duplikat, Penghapusan data duplikat penting agar analisis data lebih akurat dan tidak ada perhitungan ganda. keluaran saat Pengecekan data frame yaitu, false. Artinya tidak ada data duplikat pada data frame, sehingga tidak perlu penghapusan data duuplikat</li>
 <li>Penanganan outlier dengan metode IQR. Outlier adalah data yang terlalu kecil atau terlalu besar dibandingkan data lainnya, sehingga bisa mengganggu analisis. IQR (Interquartile Range) adalah metode statistik yang digunakan untuk menentukan batas normal sebuah data dan mengidentifikasi outlier.
 Q1 (Kuartil 1) = nilai 25% data terendah
-Q3 (Kuartil 3) = nilai 75% data terendah
-Batas bawah = Q1 - (1.5 × IQR)
+Q3 (Kuartil 3) = nilai 75% data terendah <br>
+Batas bawah = Q1 - (1.5 × IQR) <br>
 Batas atas = Q3 + (1.5 × IQR).</li> <br>
 <p><strong>Rumus IQR:</strong></p>
     <p>$$ IQR = Q3 - Q1 $$</p>
