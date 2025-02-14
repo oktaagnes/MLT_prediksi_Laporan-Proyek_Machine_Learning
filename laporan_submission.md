@@ -157,7 +157,7 @@ Sangat penting dalam skenario di mana false negatives harus diminimalkan, misaln
  ![alt text](./assets/akurasi.png)<br>
   gambar 14. hasil evaluasi<br>
 Berdasarkan hasil evaluasi model di atas, dapat disimpulkan bahwa model terbaik untuk melakukan prediksi Pemilihan Jenis Tanaman untuk Lahan Pertanian adalah model Random Forest dapat dianggap sebagai model terbaik untuk digunakan dalam kasus ini karena memiliki <b> accuracy 99% </b>.
-Model yang diuji berhasil menjawab setiap problem statement dengan baik, terutama dengan performa tinggi dari Random Forest. Model ini dapat digunakan sebagai alat bantu bagi petani untuk memilih jenis tanaman berdasarkan data objektif, mengoptimalkan hasil pertanian, dan beradaptasi dengan perubahan iklim.
+Model yang diuji berhasil menjawab setiap problem statement dengan baik, terutama dengan performa tinggi dari Random Forest. Model ini dapat digunakan sebagai alat bantu bagi petani untuk memilih jenis tanaman berdasarkan data objektif, mengoptimalkan hasil pertanian, dan membantu petani beradaptasi dengan perubahan iklim terhadap tanaman dengan jenis tanah tertentu.
 
 ## Referensi
 
