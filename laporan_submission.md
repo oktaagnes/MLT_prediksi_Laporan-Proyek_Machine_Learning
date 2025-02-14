@@ -113,9 +113,9 @@ Metode yang penulis pilih untuk memprediksi jenis tanaman yang paling sesuai den
 Metrik evaluasi yang digunakan pada proyek ini adalah mean squared error (MSE) dan menggunakan Accuracy, Precision, dan Recall. Mean squared error (MSE) mengukur error dalam model statistik dengan cara menghitung rata-rata error dari kuadrat hasil aktual dikurang hasil prediksi. <br/>
 
 **Mean Squared Error (MSE)** <br>
-MSE digunakan karena proyek ini juga berfokus pada regresi, yaitu memprediksi nilai numerik berdasarkan pola dalam data.
+<li> MSE digunakan karena proyek ini juga berfokus pada regresi, yaitu memprediksi nilai numerik berdasarkan pola dalam data.
 
-<li >Relevansi:
+Relevansi:
 MSE mengukur rata-rata perbedaan kuadrat antara nilai prediksi dan nilai aktual, sehingga memberikan gambaran seberapa jauh model dalam melakukan estimasi.
 Metrik ini sangat baik untuk regresi karena menekankan kesalahan besar lebih kuat dibandingkan kesalahan kecil, sehingga membantu dalam meningkatkan keakuratan prediksi.</li><br>
 
