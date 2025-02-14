@@ -131,7 +131,7 @@ Cocok untuk kasus di mana distribusi kelas seimbang dan setiap kelas memiliki ke
 Memberikan gambaran awal tentang performa model dalam klasifikasi. </li>
 Evaluasi menggunakan Accuracy, Precision, dan Recall bertujuan untuk memberikan gambaran yang lebih komprehensif tentang performa model dalam menangani data, khususnya dalam konteks klasifikasi. Masing-masing metrik ini memberikan informasi yang berbeda mengenai kualitas prediksi model. Berikut adalah penjelasan tentang kegunaan masing-masing metrik:<br>
 Accuracy memberikan gambaran umum performa model.<br>
-  ![alt text](./assets/accuracy.png)<br>
+  ![alt text](./assets/formula_accuracy.png)<br>
   gambar 11. formula accuracy <br>
   
 **Precision**
@@ -141,13 +141,13 @@ Relevansi:
 Sangat penting jika kesalahan klasifikasi positif lebih berisiko daripada kesalahan klasifikasi negatif.
 Cocok dalam kasus di mana false positives harus diminimalkan, seperti dalam pemilihan jenis tanaman di mana kesalahan prediksi bisa berdampak pada hasil panen.</li>
 - Precision adalah metrik evaluasi yang mengukur seberapa tepat model Anda dalam membuat prediksi positif. Artinya, dari semua prediksi positif yang dibuat oleh model, berapa banyak yang benar-benar positif.<br>
-  ![alt text](./assets/precision.png)<br>
+  ![alt text](./assets/formula_precision.png)<br>
 gambar 12. formula precision <br>
 
 **Recall**
 <li> Recall mengukur seberapa banyak data positif yang benar-benar terdeteksi oleh model dari seluruh data positif yang ada.
 - Recall, yang merupakan harmoni antara precision dan recall, dapat digunakan jika Anda ingin menggabungkan keduanya menjadi satu metrik untuk evaluasi yang lebih menyeluruh.</li><br>
- ![alt text](./assets/formula%20precision.png) <br>
+ ![alt text](./assets/formula_recall.png)<br>
   gambar 13. formula Recall<br>
     
 Relevansi:
