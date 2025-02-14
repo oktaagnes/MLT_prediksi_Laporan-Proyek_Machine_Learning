@@ -119,7 +119,7 @@ MSE digunakan karena proyek ini juga berfokus pada regresi, yaitu memprediksi ni
 MSE mengukur rata-rata perbedaan kuadrat antara nilai prediksi dan nilai aktual, sehingga memberikan gambaran seberapa jauh model dalam melakukan estimasi.
 Metrik ini sangat baik untuk regresi karena menekankan kesalahan besar lebih kuat dibandingkan kesalahan kecil, sehingga membantu dalam meningkatkan keakuratan prediksi.
 MSE bekerja dengan baik dalam model yang menggunakan optimasi berbasis diferensiasi seperti Gradient Descent.</li>
- ![alt text](./assets/mse.png?raw=true)<br>
+ ![alt text](./assets/mse.png)<br>
 gambar 10. Mean squared error (MSE) <br>
 
 **Accuracy**
@@ -149,7 +149,7 @@ gambar 12. formula precision <br>
 - Recall, yang merupakan harmoni antara precision dan recall, dapat digunakan jika Anda ingin menggabungkan keduanya menjadi satu metrik untuk evaluasi yang lebih menyeluruh.<br>
   ![alt text](./assets/formula%20recall.png?raw=true)<br>
   gambar 13. formula Recall<br>
-
+    
 Relevansi:
 Berguna ketika kita ingin memastikan bahwa semua kemungkinan kasus yang relevan dapat diklasifikasikan dengan benar oleh model.
 Sangat penting dalam skenario di mana false negatives harus diminimalkan, misalnya jika model digunakan untuk menghindari kesalahan dalam pemilihan tanaman yang salah.
