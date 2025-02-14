@@ -139,18 +139,19 @@ Accuracy memberikan gambaran umum performa model.<br>
 Relevansi:
 Sangat penting jika kesalahan klasifikasi positif lebih berisiko daripada kesalahan klasifikasi negatif.
 Cocok dalam kasus di mana false positives harus diminimalkan, seperti dalam pemilihan jenis tanaman di mana kesalahan prediksi bisa berdampak pada hasil panen.</li><br>
-  ![alt text](./assets/formula%20recall.png)<br>
+  ![alt text](./assets/formula%20precision.png)<br>
 gambar 12. formula precision <br>
 
 **Recall**
 <li> Recall mengukur seberapa banyak data positif yang benar-benar terdeteksi oleh model dari seluruh data positif yang ada. Recall, yang merupakan harmoni antara precision dan recall, dapat digunakan jika Anda ingin menggabungkan keduanya menjadi satu metrik untuk evaluasi yang lebih menyeluruh.</li><br>
- ![alt text](./assets/formula%20recall.png)<br>
-  gambar 13. formula Recall<br>
-    
+
 Relevansi:
 Berguna ketika kita ingin memastikan bahwa semua kemungkinan kasus yang relevan dapat diklasifikasikan dengan benar oleh model.
-Sangat penting dalam skenario di mana false negatives harus diminimalkan, misalnya jika model digunakan untuk menghindari kesalahan dalam pemilihan tanaman yang salah.
-  Berikut hasil Evaluasi dari algoritma K-Nearest Neighbor (KNN), Random Forest dan XGBoost. Menggunakan Accuray, precision dan recall.</li> <br>
+Sangat penting dalam skenario di mana false negatives harus diminimalkan, misalnya jika model digunakan untuk menghindari kesalahan dalam pemilihan tanaman yang salah.</li>
+ ![alt text](./assets/formula%20recall.png) <br>
+  gambar 13. formula Recall<br>
+
+ <li> Berikut hasil Evaluasi dari algoritma K-Nearest Neighbor (KNN), Random Forest dan XGBoost. Menggunakan Accuray, precision dan recall.</li> <br>
  ![alt text](./assets/akurasi.png)<br>
   gambar 14. hasil evaluasi<br>
 Berdasarkan hasil evaluasi model di atas, dapat disimpulkan bahwa model terbaik untuk melakukan prediksi Pemilihan Jenis Tanaman untuk Lahan Pertanian adalah model Random Forest dapat dianggap sebagai model terbaik untuk digunakan dalam kasus ini karena memiliki <b> accuracy 99% </b>.
