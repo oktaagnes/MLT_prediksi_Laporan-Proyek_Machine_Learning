@@ -119,7 +119,7 @@ MSE digunakan karena proyek ini juga berfokus pada regresi, yaitu memprediksi ni
 MSE mengukur rata-rata perbedaan kuadrat antara nilai prediksi dan nilai aktual, sehingga memberikan gambaran seberapa jauh model dalam melakukan estimasi.
 Metrik ini sangat baik untuk regresi karena menekankan kesalahan besar lebih kuat dibandingkan kesalahan kecil, sehingga membantu dalam meningkatkan keakuratan prediksi.
 MSE bekerja dengan baik dalam model yang menggunakan optimasi berbasis diferensiasi seperti Gradient Descent.</li>
-![alt text](./assets/mse.pngpng?raw=true)<br>
+![alt text](./assets/mse.png?raw=true)<br>
 gambar 10. Mean squared error (MSE) <br>
 
 **Accuracy**
