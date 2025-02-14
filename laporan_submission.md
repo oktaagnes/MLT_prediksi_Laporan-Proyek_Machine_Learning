@@ -141,7 +141,7 @@ Relevansi:
 Sangat penting jika kesalahan klasifikasi positif lebih berisiko daripada kesalahan klasifikasi negatif.
 Cocok dalam kasus di mana false positives harus diminimalkan, seperti dalam pemilihan jenis tanaman di mana kesalahan prediksi bisa berdampak pada hasil panen.</li>
 - Precision adalah metrik evaluasi yang mengukur seberapa tepat model Anda dalam membuat prediksi positif. Artinya, dari semua prediksi positif yang dibuat oleh model, berapa banyak yang benar-benar positif.<br>
-  ![alt text](./assets/formula_precision.png)<br>
+  ![alt text](./assets/formula%20precision.png)<br>
 gambar 12. formula precision <br>
 
 **Recall**
