@@ -153,7 +153,7 @@ gambar 12. formula precision <br>
 Relevansi:
 Berguna ketika kita ingin memastikan bahwa semua kemungkinan kasus yang relevan dapat diklasifikasikan dengan benar oleh model.
 Sangat penting dalam skenario di mana false negatives harus diminimalkan, misalnya jika model digunakan untuk menghindari kesalahan dalam pemilihan tanaman yang salah.
-  Berikut hasil Evaluasi dari algoritma K-Nearest Neighbor (KNN), Random Forest dan XGBoost. Menggunakan Accuray, precision dan recall.</li>
+  Berikut hasil Evaluasi dari algoritma K-Nearest Neighbor (KNN), Random Forest dan XGBoost. Menggunakan Accuray, precision dan recall.</li> <br>
  ![alt text](./assets/akurasi.png)<br>
   gambar 14. hasil evaluasi<br>
 Berdasarkan hasil evaluasi model di atas, dapat disimpulkan bahwa model terbaik untuk melakukan prediksi Pemilihan Jenis Tanaman untuk Lahan Pertanian adalah model Random Forest dapat dianggap sebagai model terbaik untuk digunakan dalam kasus ini karena memiliki <b> accuracy 99% </b>.
