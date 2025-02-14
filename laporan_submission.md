@@ -114,7 +114,7 @@ Metrik evaluasi yang digunakan pada proyek ini adalah mean squared error (MSE) d
 ![alt text](./assets/mse.png)<br>
 gambar 10. Mean squared error (MSE) <br>
 
-Mean Squared Error (MSE) <br>
+**Mean Squared Error (MSE)** <br>
 MSE digunakan karena proyek ini juga berfokus pada regresi, yaitu memprediksi nilai numerik berdasarkan pola dalam data.
 
 <li >Relevansi:
