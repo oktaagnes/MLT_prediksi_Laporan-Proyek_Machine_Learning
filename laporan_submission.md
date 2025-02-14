@@ -120,13 +120,21 @@ MSE digunakan karena proyek ini juga berfokus pada regresi, yaitu memprediksi ni
 <li >Relevansi:
 MSE mengukur rata-rata perbedaan kuadrat antara nilai prediksi dan nilai aktual, sehingga memberikan gambaran seberapa jauh model dalam melakukan estimasi.
 Metrik ini sangat baik untuk regresi karena menekankan kesalahan besar lebih kuat dibandingkan kesalahan kecil, sehingga membantu dalam meningkatkan keakuratan prediksi.
-MSE bekerja dengan baik dalam model yang menggunakan optimasi berbasis diferensiasi seperti Gradient Descent.<li>
+MSE bekerja dengan baik dalam model yang menggunakan optimasi berbasis diferensiasi seperti Gradient Descent.</li>
 
 Evaluasi menggunakan Accuracy, Precision, dan Recall bertujuan untuk memberikan gambaran yang lebih komprehensif tentang performa model dalam menangani data, khususnya dalam konteks klasifikasi. Masing-masing metrik ini memberikan informasi yang berbeda mengenai kualitas prediksi model. Berikut adalah penjelasan tentang kegunaan masing-masing metrik:<br>
 
 - Accuracy memberikan gambaran umum performa model.<br>
   ![alt text](./assets/formula%20accuracy.png?raw=true)<br>
   gambar 11. formula accuracy <br>
+
+** Accuracy (%)**
+ <li> Accuracy mengukur sejauh mana model mampu mengklasifikasikan data dengan benar.
+
+Relevansi:
+Digunakan untuk mengukur proporsi prediksi yang benar dari keseluruhan data uji.
+Cocok untuk kasus di mana distribusi kelas seimbang dan setiap kelas memiliki kepentingan yang sama.
+Memberikan gambaran awal tentang performa model dalam klasifikasi. </li>
 - Precision adalah metrik evaluasi yang mengukur seberapa tepat model Anda dalam membuat prediksi positif. Artinya, dari semua prediksi positif yang dibuat oleh model, berapa banyak yang benar-benar positif.<br>
   ![alt text](./assets/formula%20precision.png?raw=true)
   gambar 12. formula precision <br>
