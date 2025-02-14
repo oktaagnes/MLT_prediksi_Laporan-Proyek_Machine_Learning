@@ -114,6 +114,14 @@ Metrik evaluasi yang digunakan pada proyek ini adalah mean squared error (MSE) d
 ![alt text](./assets/mse.png)<br>
 gambar 10. Mean squared error (MSE) <br>
 
+Mean Squared Error (MSE) <br>
+MSE digunakan karena proyek ini juga berfokus pada regresi, yaitu memprediksi nilai numerik berdasarkan pola dalam data.
+
+<li >Relevansi:
+MSE mengukur rata-rata perbedaan kuadrat antara nilai prediksi dan nilai aktual, sehingga memberikan gambaran seberapa jauh model dalam melakukan estimasi.
+Metrik ini sangat baik untuk regresi karena menekankan kesalahan besar lebih kuat dibandingkan kesalahan kecil, sehingga membantu dalam meningkatkan keakuratan prediksi.
+MSE bekerja dengan baik dalam model yang menggunakan optimasi berbasis diferensiasi seperti Gradient Descent.<li>
+
 Evaluasi menggunakan Accuracy, Precision, dan Recall bertujuan untuk memberikan gambaran yang lebih komprehensif tentang performa model dalam menangani data, khususnya dalam konteks klasifikasi. Masing-masing metrik ini memberikan informasi yang berbeda mengenai kualitas prediksi model. Berikut adalah penjelasan tentang kegunaan masing-masing metrik:<br>
 
 - Accuracy memberikan gambaran umum performa model.<br>
