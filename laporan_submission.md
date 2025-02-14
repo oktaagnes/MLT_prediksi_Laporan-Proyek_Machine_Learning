@@ -47,7 +47,7 @@ Land Dataset: (https://www.kaggle.com/datasets/siddharthss/crop-recommendation-d
 Dataset yang mentah tersebut memiliki data yang berjumlah 2200 dan terdiri dari 8 atribut, yaitu N, P, K, temperature, humidity pH, rainfall dan label. Hal tersebut membuat apabila data-data tersebut disusun dalam format tabel baris dan kolom akan membentuk tabel yang berisi oleh 29580 baris dan 5 kolom.
 
 Untuk memahami atribut-atribut yang ada di dalam dataset tersebut dilakukan beberapa langkah untuk memahami isi dan tipe atribut tersebut. Pertama, dengan menggunakan fungsi bawaan dari python yaitu .info() penulis bisa mendapatkan bahwa dalam dataset tersebut tidak terdapat data yang kosong dan bisa mengetahui tipe data dari masing-masing atribut yang ada pada dataset.<br>
-![alt text](./assets/1.png?raw=true)<br>
+![alt text](./assets/1.png)<br>
 gambar 1. keluaran dari built-in function bahasa pemrograman Python pada dataset land_df<br>
 
 Kedua, dengan menggunakan .describe() penulis dapat mengetahui statistik dasar dari data seperti percentile, mean, standar deviasi, jumlah data, min, dan max. Hasil fungsi ini ditampilkan pada tabel 2 seperti berikut.
@@ -57,15 +57,15 @@ gambar 2. keluaran dari statistik dataset land_df hasil dari fungsi .describe()<
 Pada notebooks dilakukan visualisasi untuk membandingkan rerata data keseluruhan yang bertipe house dan yang bertipe unit. Didapatkan bahwa rerata harga rumah yang bertipe house lebih tinggi daripada rerata harga rumah yang bertipe unit.
 
 Pada atribut fitur price dilakukan visualisasi data seperti tampak di gambar 3, visualisasi harga yang dilakukan adalah dengan memanfaatkan histogram untuk mengetahui jumlah data pada masing-masing rentang harga rumah yang ada didataset.<br>
-![alt text](./assets/sebaranpng.png?raw=true)<br>
+![alt text](./assets/sebaranpng.png)<br>
 gambar 3. visual sebaran data numerikal <br>
 
 Pada atribut fitur price dilakukan visualisasi data seperti tampak di gambar 3, visualisasi harga yang dilakukan adalah dengan memanfaatkan histogram untuk mengetahui jumlah data pada masing-masing rentang harga rumah yang ada didataset.<br>
-![alt text](./assets/sebaran%20label.png?raw=true)<br>
+![alt text](./assets/sebaran%20label.png)<br>
 gambar 4. visual sebaran data katrgorikal <br>
 
 Selanjutnya untuk mengetahui hubungan masing-masing fitur terhadap satu sama lain dihitung korelasinya. Menghasilkan bahwa fitur price memiliki korelasi positif terhadap fitur jumlah bedrooms. Karena terdapat sejumlah data yang tidak konsisten, dalam arti ada data yang jumlah bedrooms yang tinggi tetapi memiliki price yang tinggi dan ada juga rendah. Dengan begitu nilai korelasi tidak mendekati positif satu, hanya bernilai 0.48.<br>
-![alt text](./assets/matrix.png?raw=true) <br>
+![alt text](./assets/matrix.png) <br>
 gambar 5. matriks <br>
 
 ## Data Preparation
@@ -100,12 +100,12 @@ Metode yang penulis pilih untuk memprediksi jenis tanaman yang paling sesuai den
      gambar 7. algoritma KNN <br>
 
 - 2. Random Forest: Random Forest adalah algoritma ensemble yang terdiri dari banyak pohon keputusan (decision trees) yang bekerja bersama-sama untuk meningkatkan akurasi prediksi. Setiap pohon keputusan dilatih menggunakan subset acak dari data, dan hasil akhir dihitung berdasarkan prediksi mayoritas dari seluruh pohon. Dalam konteks prediksi tanaman, Random Forest dapat menangani berbagai faktor tanah dan iklim dengan cara yang lebih fleksibel dan mengurangi risiko overfitting. Algoritma ini sangat kuat dalam menangani variabel yang memiliki interaksi kompleks, seperti suhu, kelembapan, pH, dan unsur hara tanah (N, P, K). Terdapat beberapa parameter yang digunakan untuk menginisialisasi model Random Forest, baik untuk classification maupun regression. Pada RandomForestClassifier, parameter yang digunakan antara lain adalah n_estimators yang bernilai 100, yang menentukan jumlah pohon keputusan (decision trees) yang akan dibangun dalam model.<br>
-     ![alt text](./assets/cnn.png?raw=true()>) <br>
+     ![alt text](./assets/cnn.png) <br>
      gambar 8. algoritma Random Forest (rf) <br>
 
 - 3. XGBoost: XGBoost (Extreme Gradient Boosting) adalah algoritma yang berbasis pada teknik gradient boosting dan sangat populer karena kemampuannya untuk memberikan akurasi tinggi dengan waktu komputasi yang efisien. XGBoost membangun model secara bertahap, dengan setiap model baru memperbaiki kesalahan model sebelumnya. Dalam prediksi pemilihan tanaman, XGBoost sangat baik untuk menangani data dengan banyak fitur dan menghasilkan rekomendasi yang lebih tepat dengan menggunakan teknik regularisasi untuk mengurangi overfitting. Terdapat beberapa parameter yang digunakan untuk menginisialisasi model XGBoost dan AdaBoost, baik untuk klasifikasi maupun regresi. Pada XGBClassifier, parameter objective diatur dengan nilai multi:softmax, yang menunjukkan bahwa model ini digunakan untuk masalah klasifikasi multikelas, di mana setiap sampel hanya dapat memiliki satu label kelas. Selain itu, parameter num_class ditetapkan sebesar 3, yang menunjukkan bahwa model ini akan mengklasifikasikan data ke dalam tiga kelas yang berbeda.
      Sementara itu, pada model AdaBoostRegressor, terdapat dua parameter utama yang digunakan. Pertama, n_estimators yang bernilai 90, yang menentukan jumlah model dasar (misalnya pohon keputusan) yang akan digunakan dalam proses boosting. Semakin banyak model dasar, model dapat menjadi lebih kuat, tetapi dengan risiko overfitting jika jumlahnya terlalu banyak.<br>
-     ![alt text](./assets/XGBoost.png?raw=true)<br>
+     ![alt text](./assets/XGBoost.png)<br>
      gambar 9. algoritma XGBoost <br>
 
 ## Evaluation
@@ -131,7 +131,7 @@ Cocok untuk kasus di mana distribusi kelas seimbang dan setiap kelas memiliki ke
 Memberikan gambaran awal tentang performa model dalam klasifikasi. </li>
 Evaluasi menggunakan Accuracy, Precision, dan Recall bertujuan untuk memberikan gambaran yang lebih komprehensif tentang performa model dalam menangani data, khususnya dalam konteks klasifikasi. Masing-masing metrik ini memberikan informasi yang berbeda mengenai kualitas prediksi model. Berikut adalah penjelasan tentang kegunaan masing-masing metrik:<br>
 Accuracy memberikan gambaran umum performa model.<br>
-  ![alt text](./assets/formula%20accuracy.png?raw=true)<br>
+  ![alt text](./assets/accuracy.png)<br>
   gambar 11. formula accuracy <br>
   
 **Precision**
@@ -141,13 +141,13 @@ Relevansi:
 Sangat penting jika kesalahan klasifikasi positif lebih berisiko daripada kesalahan klasifikasi negatif.
 Cocok dalam kasus di mana false positives harus diminimalkan, seperti dalam pemilihan jenis tanaman di mana kesalahan prediksi bisa berdampak pada hasil panen.</li>
 - Precision adalah metrik evaluasi yang mengukur seberapa tepat model Anda dalam membuat prediksi positif. Artinya, dari semua prediksi positif yang dibuat oleh model, berapa banyak yang benar-benar positif.<br>
-  ![alt text](./assets/formula%20precision.png?raw=true)
+  ![alt text](./assets/precision.png)<br>
 gambar 12. formula precision <br>
 
 **Recall**
 <li> Recall mengukur seberapa banyak data positif yang benar-benar terdeteksi oleh model dari seluruh data positif yang ada.
-- Recall, yang merupakan harmoni antara precision dan recall, dapat digunakan jika Anda ingin menggabungkan keduanya menjadi satu metrik untuk evaluasi yang lebih menyeluruh.<br>
-  ![alt text](./assets/formula%20recall.png?raw=true)<br>
+- Recall, yang merupakan harmoni antara precision dan recall, dapat digunakan jika Anda ingin menggabungkan keduanya menjadi satu metrik untuk evaluasi yang lebih menyeluruh.</li><br>
+ ![alt text](./assets/formula%20precision.png) <br>
   gambar 13. formula Recall<br>
     
 Relevansi:
