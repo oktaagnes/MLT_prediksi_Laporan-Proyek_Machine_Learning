@@ -119,7 +119,7 @@ MSE digunakan karena proyek ini juga berfokus pada regresi, yaitu memprediksi ni
 MSE mengukur rata-rata perbedaan kuadrat antara nilai prediksi dan nilai aktual, sehingga memberikan gambaran seberapa jauh model dalam melakukan estimasi.
 Metrik ini sangat baik untuk regresi karena menekankan kesalahan besar lebih kuat dibandingkan kesalahan kecil, sehingga membantu dalam meningkatkan keakuratan prediksi.
 MSE bekerja dengan baik dalam model yang menggunakan optimasi berbasis diferensiasi seperti Gradient Descent.</li>
-![alt text](./assets/mse.png)<br>
+![alt text](./assets/mse.pngpng?raw=true)<br>
 gambar 10. Mean squared error (MSE) <br>
 
 **Accuracy**
@@ -130,11 +130,11 @@ Digunakan untuk mengukur proporsi prediksi yang benar dari keseluruhan data uji.
 Cocok untuk kasus di mana distribusi kelas seimbang dan setiap kelas memiliki kepentingan yang sama.
 Memberikan gambaran awal tentang performa model dalam klasifikasi. </li>
 Evaluasi menggunakan Accuracy, Precision, dan Recall bertujuan untuk memberikan gambaran yang lebih komprehensif tentang performa model dalam menangani data, khususnya dalam konteks klasifikasi. Masing-masing metrik ini memberikan informasi yang berbeda mengenai kualitas prediksi model. Berikut adalah penjelasan tentang kegunaan masing-masing metrik:<br>
-- Accuracy memberikan gambaran umum performa model.<br>
+Accuracy memberikan gambaran umum performa model.<br>
   ![alt text](./assets/formula%20accuracy.png?raw=true)<br>
   gambar 11. formula accuracy <br>
   
-**Precision (%)**
+**Precision**
 <li>Precision mengukur seberapa banyak prediksi positif yang benar dari total prediksi positif yang dihasilkan model.
 
 Relevansi:
@@ -154,7 +154,7 @@ Relevansi:
 Berguna ketika kita ingin memastikan bahwa semua kemungkinan kasus yang relevan dapat diklasifikasikan dengan benar oleh model.
 Sangat penting dalam skenario di mana false negatives harus diminimalkan, misalnya jika model digunakan untuk menghindari kesalahan dalam pemilihan tanaman yang salah.
   Berikut hasil Evaluasi dari algoritma K-Nearest Neighbor (KNN), Random Forest dan XGBoost. Menggunakan Accuray, precision dan recall.</li>
-  ![alt text](./assets/akurasi.png)<br>
+ ![alt text](./assets/akurasi.png)<br>
   gambar 14. hasil evaluasi<br>
 Berdasarkan hasil evaluasi model di atas, dapat disimpulkan bahwa model terbaik untuk melakukan prediksi Pemilihan Jenis Tanaman untuk Lahan Pertanian adalah model Random Forest dapat dianggap sebagai model terbaik untuk digunakan dalam kasus ini karena memiliki <b> accuracy 99% </b>.
 Model yang diuji berhasil menjawab setiap problem statement dengan baik, terutama dengan performa tinggi dari Random Forest. Model ini dapat digunakan sebagai alat bantu bagi petani untuk memilih jenis tanaman berdasarkan data objektif, mengoptimalkan hasil pertanian, dan beradaptasi dengan perubahan iklim.
